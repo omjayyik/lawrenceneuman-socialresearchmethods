@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Experimental Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3.5rem;
+            }
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .accordion-item .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 1000px; /* Adjust as needed */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .accordion-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+        .icon-plus {
+            transition: transform 0.3s ease-out;
+        }
+        .animated-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-slate-800 text-white text-center py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-wider">Chapter 9: Experimental Research</h1>
+            <p class="text-lg md:text-xl text-slate-300">The Gold Standard for Testing Causal Relationships</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+
+        <!-- Section 1: The Logic of Experiments -->
+        <section class="text-center my-16 animated-section">
+            <h2 class="section-title text-red-700">The Logic of Experiments</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Experimental research is the most effective method for testing a hypothesis about cause and effect. The researcher actively manipulates a situation to see what happens, allowing for powerful causal explanations.</p>
+        </section>
+
+        <!-- Section 2: The 7 Parts of an Experiment -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-red-700">The Anatomy of an Experiment</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">A true experiment is built from several key components. While not all studies have every part, the classical design includes all seven.</p>
+            <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200"><h3 class="text-xl font-bold mb-2">1. Treatment (Independent Variable)</h3><p>The "cause" or the stimulus that the researcher manipulates.</p></div>
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200"><h3 class="text-xl font-bold mb-2">2. Dependent Variable</h3><p>The "effect" or the outcome that the researcher measures.</p></div>
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200"><h3 class="text-xl font-bold mb-2">3. Pretest</h3><p>A measurement of the dependent variable *before* the treatment is introduced.</p></div>
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200"><h3 class="text-xl font-bold mb-2">4. Posttest</h3><p>A measurement of the dependent variable *after* the treatment has been introduced.</p></div>
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200"><h3 class="text-xl font-bold mb-2">5. Experimental Group</h3><p>The group of participants that receives the treatment.</p></div>
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200"><h3 class="text-xl font-bold mb-2">6. Control Group</h3><p>The group of participants that does *not* receive the treatment, serving as a baseline for comparison.</p></div>
+            </div>
+             <div class="mt-8 card bg-white p-8 rounded-xl shadow-2xl border-2 border-red-500 w-full lg:w-2/3 mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-2">7. Random Assignment</h3>
+                <p class="text-center text-lg text-gray-600">The most important element. This is the process of assigning participants to groups using a random method (like a coin flip). It ensures the groups are statistically identical before the experiment begins, eliminating many alternative explanations for any observed changes.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: The Researcher's Dilemma: Validity -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-red-700">The Researcher's Dilemma: Validity</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">A good experiment must be valid, but there's a trade-off. Researchers must balance two types of validity, and strengthening one can often weaken the other.</p>
+            <div class="mt-12 max-w-4xl mx-auto space-y-4">
+                <!-- Internal Validity -->
+                <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200 p-6 cursor-pointer">
+                    <div class="flex justify-between items-center"><h3 class="text-xl font-bold text-gray-800">🛡️ Internal Validity: Was the experiment done right?</h3><div class="icon-plus text-3xl text-red-500 font-light">+</div></div>
+                    <div class="accordion-content text-gray-600">
+                        <p class="mb-4">This means we can confidently say that the treatment (IV) was the *only* thing that caused the change in the outcome (DV). A study has high internal validity when there are no confounding variables. <strong class="text-red-600">Threats to internal validity include:</strong></p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Selection Bias:</strong> Groups are not equivalent at the start of the study. (Solved by random assignment).</li>
+                            <li><strong>History:</strong> An external event occurs during the experiment that affects the results.</li>
+                            <li><strong>Maturation:</strong> Natural processes of growth or change in the participants over time affect the DV.</li>
+                            <li><strong>Testing:</strong> The pretest itself influences the results of the posttest.</li>
+                            <li><strong>Mortality:</strong> Participants drop out of the study, making the groups no longer equivalent.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- External Validity -->
+                <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200 p-6 cursor-pointer">
+                    <div class="flex justify-between items-center"><h3 class="text-xl font-bold text-gray-800">🌍 External Validity: Does it apply to the real world?</h3><div class="icon-plus text-3xl text-red-500 font-light">+</div></div>
+                    <div class="accordion-content text-gray-600">
+                        <p class="mb-4">This is the ability to generalize the findings from the specific experimental setting to other people, places, and situations in the real world. <strong class="text-red-600">Threats to external validity include:</strong></p>
+                        <ul class="list-disc list-inside space-y-2">
+                           <li><strong>Reactivity:</strong> Participants modify their behavior simply because they are aware they are being studied (also known as the Hawthorne Effect).</li>
+                           <li><strong>Artificial Setting:</strong> The highly controlled environment of a lab experiment may not reflect real-world conditions.</li>
+                           <li><strong>Unrepresentative Sample:</strong> The participants in the experiment (e.g., college students) may not be representative of the broader population.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: A Typology of Designs -->
+        <section class="my-24 bg-slate-800 text-white rounded-2xl p-8 md:p-16 animated-section">
+            <div class="text-center">
+                <h2 class="section-title">A Typology of Designs</h2>
+                <p class="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">Experimental designs vary in their rigor and ability to demonstrate causality. We can group them into three main categories.</p>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="card bg-slate-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-red-400 mb-2">Weak: Pre-Experimental</h3>
+                    <p>Lack random assignment and a control group, making them poor for causal inference. They are often used in exploratory studies. <br/><strong>Example:</strong> One-Shot Case Study (A group gets a treatment, then a posttest is given).</p>
+                </div>
+                <div class="card bg-slate-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-red-400 mb-2">Good: Quasi-Experimental</h3>
+                    <p>These designs are stronger because they have more controls, but they still lack random assignment. They are often used in real-world settings where random assignment isn't possible. <br/><strong>Example:</strong> Nonequivalent Control Group (Two existing groups are used; one gets the treatment, and both are pre- and post-tested).</p>
+                </div>
+                <div class="card bg-slate-700 p-6 rounded-lg border-2 border-red-400">
+                    <h3 class="text-2xl font-bold text-red-400 mb-2">Strongest: Classical Design</h3>
+                    <p>The "gold standard." It includes random assignment, a pretest, a posttest, an experimental group, and a control group. This design provides the strongest evidence for causality by eliminating most threats to internal validity.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center bg-slate-800 text-slate-400 p-6">
+        <p>Interactive Infographic based on Chapter 9 of "Social Research Methods" by W. Lawrence Neuman.</p>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                if (!isActive) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+
+        // Scroll animation for sections
+        const animatedSections = document.querySelectorAll('.animated-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        animatedSections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>

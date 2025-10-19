@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Nonreactive Research and Secondary Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3.5rem;
+            }
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .interactive-tab {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .interactive-tab.active {
+            color: #5b21b6; /* Violet */
+            border-color: #5b21b6;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .animated-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-violet-900 text-white text-center py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-wider">Chapter 11: Nonreactive Research</h1>
+            <p class="text-lg md:text-xl text-violet-200">The Science of Unobtrusive Measures</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+
+        <!-- Section 1: The Logic of Nonreactive Research -->
+        <section class="my-16 animated-section">
+            <h2 class="section-title text-center text-violet-800">Studying People Without Their Knowledge</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Nonreactive research refers to methods of studying social behavior where the people being studied are unaware they are part of a study. This eliminates the problem of reactivity (like the Hawthorne effect), where people alter their behavior simply because they are being watched.</p>
+            <div class="mt-8 bg-gray-200 p-6 rounded-lg max-w-4xl mx-auto text-center border-l-4 border-violet-500">
+                <p class="italic text-xl">The key advantage: The act of observation does not influence the behavior being observed.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Major Types of Nonreactive Research -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-violet-800">Exploring the Evidence Left Behind</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Researchers use a variety of methods to analyze the traces of social life that people leave behind. <br/><strong class="text-violet-600">Click the tabs below to explore the main approaches.</strong></p>
+
+            <div class="mt-12 bg-white rounded-xl shadow-xl border border-gray-200 p-4 md:p-8">
+                <!-- Tabs -->
+                <div class="flex flex-col sm:flex-row justify-center sm:space-x-8 border-b border-gray-200 mb-6 font-bold text-lg text-gray-500">
+                    <div class="interactive-tab active py-3 px-5 text-center" data-tab="1">📖 Content Analysis</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="2">📈 Existing Statistics</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="3">🔄 Secondary Analysis</div>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="tab-content-container">
+                    <!-- Content Analysis -->
+                    <div id="tab-1" class="tab-content active p-4">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">Content Analysis: The Study of Communications</h3>
+                        <p class="text-lg text-gray-600 mb-6">A technique for gathering and analyzing the content of text, pictures, or symbols. The "content" can be anything that people create and communicate.</p>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">What Can Be Analyzed?</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Books, magazines, newspapers</li>
+                                    <li>Websites, social media posts, emails</li>
+                                    <li>Speeches, poems, song lyrics</li>
+                                    <li>Paintings, photographs, advertisements</li>
+                                    <li>Movies, TV shows, commercials</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">The Coding Process</h4>
+                                <p>Content analysis involves creating a systematic <strong class="text-violet-600">coding system</strong> to convert the content into quantitative data. This involves defining your units of analysis and the variables you will measure.</p>
+                                <ul class="list-disc list-inside space-y-1 mt-2">
+                                    <li><strong>Manifest Coding:</strong> Counting the visible, surface content (e.g., counting the number of times the word "love" appears).</li>
+                                    <li><strong>Latent Coding:</strong> Looking for the underlying, implicit meaning (e.g., rating how romantic a song's lyrics are on a scale of 1 to 5).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Existing Statistics -->
+                    <div id="tab-2" class="tab-content p-4">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">Existing Statistics: Using Data Archives</h3>
+                        <p class="text-lg text-gray-600 mb-6">In this method, the researcher uses large-scale data sets that were collected by governments or other large organizations. The data is already compiled and available for analysis.</p>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">Sources of Data</h4>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>U.S. Census Bureau</li>
+                                    <li>Bureau of Labor Statistics</li>
+                                    <li>United Nations, World Bank</li>
+                                    <li>Crime statistics (e.g., Uniform Crime Reports)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">Strengths & Weaknesses</h4>
+                                <p><strong class="text-green-600">Strengths:</strong> Low cost, extensive data coverage, high quality of data collection.</p>
+                                <p class="mt-2"><strong class="text-red-600">Weaknesses:</strong> The researcher is limited to the variables that were already collected, which might not perfectly match their concepts. It's crucial to understand how the original data was collected.</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+                            <h4 class="font-bold text-xl mb-2 text-red-800">🚨 Beware the Ecological Fallacy</h4>
+                            <p>This is a critical error of logic. It occurs when a researcher has data for a large group (e.g., cities) and makes assumptions about individuals within that group. Just because a city has a high crime rate doesn't mean every individual in that city is a criminal.</p>
+                        </div>
+                    </div>
+                    <!-- Secondary Analysis -->
+                    <div id="tab-3" class="tab-content p-4">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">Secondary Analysis: Re-analyzing Survey Data</h3>
+                        <p class="text-lg text-gray-600 mb-6">This is a specific type of existing statistics research that focuses on re-analyzing survey data collected by another researcher or organization. It has become a major research method in the social sciences.</p>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">Major Datasets</h4>
+                                <p>There are huge, high-quality surveys conducted regularly that are available for public use, such as:</p>
+                                <ul class="list-disc list-inside space-y-1 mt-2">
+                                    <li>General Social Survey (GSS)</li>
+                                    <li>American National Election Study (ANES)</li>
+                                    <li>Current Population Survey (CPS)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">Strengths & Weaknesses</h4>
+                                <p><strong class="text-green-600">Strengths:</strong> Enormous savings in time, money, and effort. Access to high-quality, nationally representative samples. Allows for replication and new analysis of old questions.</p>
+                                <p class="mt-2"><strong class="text-red-600">Weaknesses:</strong> The data may be complex and require statistical expertise. The available variables might not be a perfect fit for the researcher's theoretical concepts. Data quality can sometimes be an issue.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Ethical Considerations -->
+        <section class="my-24 bg-slate-800 text-white rounded-2xl p-8 md:p-16 animated-section">
+            <div class="text-center">
+                <h2 class="section-title">Ethical Considerations</h2>
+                <p class="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">Even though nonreactive research doesn't involve direct contact with people, it still has important ethical dimensions.</p>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card bg-slate-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-violet-400 mb-2">Privacy & Confidentiality</h3>
+                    <p>The primary concern is protecting the privacy of individuals, especially when using existing statistics or secondary survey data. Researchers have a moral obligation to ensure that no individual can be identified from the data they publish.</p>
+                </div>
+                <div class="card bg-slate-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-violet-400 mb-2">Data Integrity</h3>
+                    <p>Researchers must be transparent about the limitations of the data they are using. This includes clearly stating the original purpose of the data collection and acknowledging any potential issues with validity or reliability.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center bg-slate-800 text-slate-400 p-6">
+        <p>Interactive Infographic based on Chapter 11 of "Social Research Methods" by W. Lawrence Neuman.</p>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.interactive-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.tab;
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('tab-' + tabId).classList.add('active');
+            });
+        });
+
+        // Scroll animation for sections
+        const animatedSections = document.querySelectorAll('.animated-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        animatedSections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>

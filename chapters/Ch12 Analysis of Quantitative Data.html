@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Analysis of Quantitative Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3.5rem;
+            }
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .interactive-tab {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .interactive-tab.active {
+            color: #1e3a8a; /* Navy Blue */
+            border-color: #1e3a8a;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .animated-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-slate-900 text-white text-center py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-wider">Chapter 12: Analysis of Quantitative Data</h1>
+            <p class="text-lg md:text-xl text-slate-300">Making Numbers Speak</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+
+        <!-- Section 1: Preparing Your Data -->
+        <section class="my-16 animated-section">
+            <h2 class="section-title text-center text-blue-900">Step 1: Preparing Your Data</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Before analysis can begin, raw information must be systematically organized and converted into a numerical format that a computer can understand.</p>
+            <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-2">1. Coding</h3>
+                    <p>Assigning numerical codes to non-numerical categories. <br/><strong>Ex:</strong> Male = 1, Female = 2; Agree = 1, Neutral = 2, Disagree = 3.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-2">2. Entering Data</h3>
+                    <p>Typing the coded data into a file, typically a spreadsheet-like format called a data matrix where rows are cases and columns are variables.</p>
+                </div>
+                 <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-2">3. Cleaning Data</h3>
+                    <p>Checking for and correcting errors in the data file, such as impossible codes (e.g., a "3" for gender when codes are only 1 and 2).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Univariate Analysis -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-blue-900">Step 2: Describing One Variable</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Univariate analysis is the first look at your data, variable by variable. Its purpose is to describe the basic characteristics of your sample. <br/><strong class="text-blue-800">Click the tabs below to explore the key tools.</strong></p>
+             <div class="mt-12 bg-white rounded-xl shadow-xl border border-gray-200 p-4 md:p-8">
+                <!-- Tabs -->
+                <div class="flex flex-col sm:flex-row justify-center sm:space-x-8 border-b border-gray-200 mb-6 font-bold text-lg text-gray-500">
+                    <div class="interactive-tab active py-3 px-5 text-center" data-tab="1">📊 Frequency Distributions</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="2">🎯 Central Tendency</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="3">↔️ Measures of Variation</div>
+                </div>
+                <!-- Tab Content -->
+                <div id="tab-content-container">
+                    <div id="tab-1" class="tab-content active p-4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Frequency Distributions</h3>
+                        <p class="text-lg text-gray-600 mb-6">A table that shows how many cases fall into each category of a variable. It's the simplest way to see the "shape" of your data. Can also be shown as a bar chart or histogram.</p>
+                    </div>
+                    <div id="tab-2" class="tab-content p-4">
+                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Measures of Central Tendency (The "Typical" Value)</h3>
+                         <div class="grid md:grid-cols-3 gap-6">
+                            <div class="card bg-gray-50 p-4 rounded-lg"><strong>Mode:</strong> The most frequent or common score. Best for nominal data.</div>
+                            <div class="card bg-gray-50 p-4 rounded-lg"><strong>Median:</strong> The middle point or 50th percentile. It's the best measure when there are extreme outliers.</div>
+                            <div class="card bg-gray-50 p-4 rounded-lg"><strong>Mean:</strong> The arithmetic average. It's the most widely used measure but is sensitive to extreme scores.</div>
+                         </div>
+                    </div>
+                    <div id="tab-3" class="tab-content p-4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Measures of Variation (The "Spread" of Scores)</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="card bg-gray-50 p-4 rounded-lg"><strong>Range:</strong> The simplest measure. The difference between the highest and lowest scores.</div>
+                            <div class="card bg-gray-50 p-4 rounded-lg"><strong>Percentiles:</strong> The percentage of cases at or below a certain score.</div>
+                            <div class="card bg-gray-50 p-4 rounded-lg"><strong>Standard Deviation:</strong> The most powerful measure. It tells you the "average distance" of scores from the mean. A small SD means scores are tightly clustered; a large SD means they are spread out.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Bivariate Analysis -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-blue-900">Step 3: Exploring Relationships</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Bivariate analysis looks at the relationship between two variables at the same time. This is where we start to test our hypotheses about how the social world works.</p>
+            <div class="mt-12 grid lg:grid-cols-2 gap-8">
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-3">Contingency Tables</h3>
+                    <p class="mb-4">A table that shows the relationship between two categorical variables. By converting the raw numbers to percentages, we can see if the categories of one variable are "contingent" on the categories of another.</p>
+                    <img src="https://placehold.co/400x200/dbeafe/1e3a8a?text=Example+Crosstab" class="mx-auto rounded-md shadow" alt="An example of a contingency table showing two variables.">
+                </div>
+                <div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                     <h3 class="text-2xl font-bold mb-3">Scattergrams</h3>
+                     <p class="mb-4">A graph that shows the relationship between two interval or ratio variables. Each dot represents one case. The overall pattern of dots reveals the direction and strength of the relationship.</p>
+                     <img src="https://placehold.co/400x200/dbeafe/1e3a8a?text=Example+Scattergram" class="mx-auto rounded-md shadow" alt="An example of a scattergram showing a positive relationship.">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Advanced Analysis -->
+        <section class="my-24 bg-slate-800 text-white rounded-2xl p-8 md:p-16 animated-section">
+            <div class="text-center">
+                <h2 class="section-title">Beyond Two Variables</h2>
+                <p class="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">Often, the social world is more complex than a simple two-variable relationship. Advanced techniques help us understand these complexities.</p>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card bg-slate-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-2">Multivariate Analysis</h3>
+                    <p>This involves looking at three or more variables simultaneously. It helps us see if an initial bivariate relationship holds up after we control for a third variable. This is how we can spot spurious relationships (where a hidden third variable is the true cause).</p>
+                </div>
+                <div class="card bg-slate-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-2">Inferential Statistics</h3>
+                    <p>This branch of statistics answers a crucial question: "Is the relationship I found in my sample real, or is it just due to random chance?" It uses probability to determine <strong class="text-white">statistical significance</strong>. A "significant" result (e.g., p < .05) means we are confident the relationship exists in the wider population.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center bg-slate-800 text-slate-400 p-6">
+        <p>Interactive Infographic based on Chapter 12 of "Social Research Methods" by W. Lawrence Neuman.</p>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.interactive-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.tab;
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('tab-' + tabId).classList.add('active');
+            });
+        });
+
+        // Scroll animation for sections
+        const animatedSections = document.querySelectorAll('.animated-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        animatedSections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>

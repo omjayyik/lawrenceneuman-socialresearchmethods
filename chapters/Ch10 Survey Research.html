@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Survey Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3.5rem;
+            }
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .accordion-item .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 1000px; /* Adjust as needed */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .accordion-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+        .icon-plus {
+            transition: transform 0.3s ease-out;
+        }
+        .interactive-tab {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .interactive-tab.active {
+            color: #0891b2; /* Cyan */
+            border-color: #0891b2;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .animated-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-cyan-800 text-white text-center py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-wider">Chapter 10: Survey Research</h1>
+            <p class="text-lg md:text-xl text-cyan-200">The Art and Science of Asking Questions</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+
+        <!-- Section 1: The Logic of Survey Research -->
+        <section class="my-16 animated-section">
+            <h2 class="section-title text-center text-cyan-700">The Logic of Survey Research</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Survey research is the most widely used method in social science. It involves asking a sample of people questions to learn about their attitudes, behaviors, and beliefs, and then using those answers to paint a picture of the larger population.</p>
+            <div class="mt-12 flex flex-col md:flex-row items-center justify-around text-center gap-4">
+                <div class="p-4"><div class="text-5xl">📝</div><h3 class="font-bold mt-2">1. Design Questionnaire</h3></div>
+                <div class="text-3xl text-cyan-500 font-bold">→</div>
+                <div class="p-4"><div class="text-5xl">👥</div><h3 class="font-bold mt-2">2. Select Sample</h3></div>
+                <div class="text-3xl text-cyan-500 font-bold">→</div>
+                <div class="p-4"><div class="text-5xl">📊</div><h3 class="font-bold mt-2">3. Collect & Analyze Data</h3></div>
+            </div>
+        </section>
+
+        <!-- Section 2: Crafting the Questionnaire -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-cyan-700">The Heart of the Survey</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">The questionnaire is the central instrument of any survey. Crafting good questions is an art that requires avoiding common pitfalls. <strong class="text-cyan-600">Click each item to reveal more.</strong></p>
+            <div class="mt-12 max-w-4xl mx-auto space-y-3">
+                <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200 p-6 cursor-pointer"><div class="flex justify-between items-center"><h3 class="text-xl font-bold text-gray-800">🚫 12 Things to Avoid in Question Writing</h3><div class="icon-plus text-3xl text-cyan-500 font-light">+</div></div><div class="accordion-content text-gray-600 grid sm:grid-cols-2 gap-4">
+                    <p><strong>1. Avoid Jargon & Slang:</strong> Use language your entire sample will understand.</p>
+                    <p><strong>2. Avoid Ambiguity:</strong> Be precise. "What's your income?" is vague. "What was your total pre-tax income in 2024?" is better.</p>
+                    <p><strong>3. Avoid Emotional Language:</strong> Words like "slaughter" or "freedom" can bias responses.</p>
+                    <p><strong>4. Avoid Prestige Bias:</strong> Don't link a statement to a prestigious person or group (e.g., "Do you agree with the President that...").</p>
+                    <p><strong>5. Avoid Double-Barreled Questions:</strong> Ask only one thing at a time. Don't ask, "Do you support the new tax and the new park?"</p>
+                    <p><strong>6. Avoid Leading Questions:</strong> Don't push respondents toward a certain answer (e.g., "You don't smoke, do you?").</p>
+                    <p><strong>7. Avoid Issues Beyond Respondent Capabilities:</strong> Don't ask questions people can't realistically answer.</p>
+                    <p><strong>8. Avoid False Premises:</strong> Don't start a question with a premise the respondent may disagree with.</p>
+                    <p><strong>9. Avoid Asking About Future Intentions:</strong> People are poor predictors of their own future behavior.</p>
+                    <p><strong>10. Avoid Double Negatives:</strong> They are confusing. "Do you disagree that students should not be required to..." is a bad question.</p>
+                    <p><strong>11. Avoid Overlapping Response Categories:</strong> Ensure answers are mutually exclusive (e.g., Age 18-25, 26-35, not 18-25, 25-35).</p>
+                    <p><strong>12. Avoid Unbalanced Response Categories:</strong> Offer an equal number of positive and negative choices.</p>
+                </div></div>
+
+                <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200 p-6 cursor-pointer"><div class="flex justify-between items-center"><h3 class="text-xl font-bold text-gray-800">⚠️ Social Desirability & Wording</h3><div class="icon-plus text-3xl text-cyan-500 font-light">+</div></div><div class="accordion-content text-gray-600">
+                    <p>People often give answers that make them look good, rather than what's truthful. This is the <strong>social desirability bias</strong>. For sensitive topics, careful, neutral wording is essential. Small changes in wording can produce huge differences in results.</p>
+                    <p class="mt-2"><strong>Example:</strong> "Forbidding" speeches vs. "Not allowing" speeches gets different levels of support, even though they mean the same thing.</p>
+                </div></div>
+
+                <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200 p-6 cursor-pointer"><div class="flex justify-between items-center"><h3 class="text-xl font-bold text-gray-800">🧩 Question Types & Layout</h3><div class="icon-plus text-3xl text-cyan-500 font-light">+</div></div><div class="accordion-content text-gray-600">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Open vs. Closed-Ended:</strong> Open-ended questions allow any answer, while closed-ended provide fixed choices.</li>
+                        <li><strong>Contingency Questions:</strong> Two-part questions where a second question's applicability depends on the answer to the first (e.g., "1. Have you ever smoked? If yes, 2. How often do you smoke?").</li>
+                        <li><strong>Matrix Questions:</strong> A grid format for efficiently asking about multiple items using the same response categories.</li>
+                        <li><strong>Order Effects:</strong> The order of questions matters. Early questions can prime respondents and influence their answers to later questions. Always start with easy, non-threatening questions.</li>
+                    </ul>
+                </div></div>
+            </div>
+        </section>
+
+        <!-- Section 3: Types of Surveys -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-cyan-700">Choosing Your Method</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">There are several ways to conduct a survey, each with its own set of strengths and weaknesses. <br/><strong class="text-cyan-600">Click the tabs below to compare them.</strong></p>
+
+            <div class="mt-12 bg-white rounded-xl shadow-xl border border-gray-200 p-4 md:p-8">
+                <!-- Tabs -->
+                <div class="flex flex-col sm:flex-row justify-center sm:space-x-8 border-b border-gray-200 mb-6 font-bold text-lg text-gray-500">
+                    <div class="interactive-tab active py-3 px-5 text-center" data-tab="1">✉️ Mail & Self-Administered</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="2">💻 Web Surveys</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="3">📞 Telephone Interviews</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="4">🤝 Face-to-Face Interviews</div>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="tab-content-container">
+                    <div id="tab-1" class="tab-content active p-4 grid md:grid-cols-2 gap-6"><div class="prose"><h3>Advantages</h3><ul><li>Low cost</li><li>Can reach wide geographic areas</li><li>Respondent has time to think</li><li>Offers anonymity</li></ul></div><div class="prose"><h3>Disadvantages</h3><ul><li>Very low response rates</li><li>No control over conditions</li><li>No one to clarify questions</li><li>Literacy required</li></ul></div></div>
+                    <div id="tab-2" class="tab-content p-4 grid md:grid-cols-2 gap-6"><div class="prose"><h3>Advantages</h3><ul><li>Lowest cost</li><li>Fastest data collection</li><li>Can use complex skip patterns and visuals</li></ul></div><div class="prose"><h3>Disadvantages</h3><ul><li>Coverage (not everyone is online)</li><li>Privacy and security concerns</li><li>Can have very low response rates</li></ul></div></div>
+                    <div id="tab-3" class="tab-content p-4 grid md:grid-cols-2 gap-6"><div class="prose"><h3>Advantages</h3><ul><li>High response rates</li><li>Can reach wide geographic areas</li><li>Interviewer can clarify questions</li></ul></div><div class="prose"><h3>Disadvantages</h3><ul><li>Higher cost than mail/web</li><li>Lack of visual aids</li><li>Interviewer bias is possible</li><li>Call screening is a growing problem</li></ul></div></div>
+                    <div id="tab-4" class="tab-content p-4 grid md:grid-cols-2 gap-6"><div class="prose"><h3>Advantages</h3><ul><li>Highest response rates</li><li>Allows for long, complex questionnaires</li><li>Interviewer can observe and build rapport</li><li>Can use visual aids</li></ul></div><div class="prose"><h3>Disadvantages</h3><ul><li>Highest cost</li><li>Interviewer bias is a major concern</li><li>Logistically complex and slow</li></ul></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The Art of the Interview -->
+        <section class="my-24 bg-slate-800 text-white rounded-2xl p-8 md:p-16 animated-section">
+            <div class="text-center">
+                <h2 class="section-title">The Art of the Interview</h2>
+                <p class="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">In telephone and face-to-face surveys, the interviewer is not just a question-reader; they are a critical part of the measurement process.</p>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="card bg-slate-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-2">Build Rapport</h3>
+                    <p>The interviewer's first job is to gain trust and cooperation. A friendly, professional demeanor is key to getting honest answers.</p>
+                </div>
+                <div class="card bg-slate-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-2">Remain Neutral</h3>
+                    <p>The interviewer must read questions exactly as written and never show approval or disapproval of an answer. Their presence should not influence the responses.</p>
+                </div>
+                <div class="card bg-slate-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-cyan-400 mb-2">Probe for Answers</h3>
+                    <p>When a respondent gives an incomplete or irrelevant answer, the interviewer uses neutral "probes" (e.g., "Could you tell me more about that?") to get a better response.</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="text-center bg-slate-800 text-slate-400 p-6">
+        <p>Interactive Infographic based on Chapter 10 of "Social Research Methods" by W. Lawrence Neuman.</p>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                if (!isActive) { item.classList.add('active'); } 
+                else { item.classList.remove('active'); }
+            });
+        });
+
+        // Tab functionality
+        const tabs = document.querySelectorAll('.interactive-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.tab;
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('tab-' + tabId).classList.add('active');
+            });
+        });
+
+        // Scroll animation for sections
+        const animatedSections = document.querySelectorAll('.animated-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        animatedSections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>

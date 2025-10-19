@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: The Meanings of Methodology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3.5rem;
+            }
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .interactive-tab {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .interactive-tab.active {
+            color: #5b21b6; /* Deep Purple */
+            border-color: #5b21b6;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .animated-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .paradigm-card {
+            border-top: 5px solid;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-purple-800 text-white text-center py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-wider">Chapter 4: The Meanings of Methodology</h1>
+            <p class="text-lg md:text-xl text-purple-200">The Three Lenses of Social Science</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+
+        <!-- Section 1: Beyond Just Methods -->
+        <section class="text-center my-16 animated-section">
+            <h2 class="section-title text-purple-700">More Than Just "How-To"</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Methodology isn't a list of techniques. It's the entire philosophical system behind your research. It's about the fundamental assumptions you make about the world and how we can know it.</p>
+            <div class="mt-8 bg-gray-200 p-6 rounded-lg max-w-4xl mx-auto italic text-gray-700 text-xl border-l-4 border-purple-500">
+                <p>"The confusion in the social sciences... is wrapped up with the long-continuing controversy about the nature of Science."</p>
+                <cite class="block text-right mt-2 not-italic">- C. Wright Mills</cite>
+            </div>
+        </section>
+
+        <!-- Section 2: The Three Approaches -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-purple-700">The Three Major Paradigms</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Social science is not a single, unified field. It contains three major approaches, or paradigms, to conducting research. Think of them as different lenses for viewing the social world. <br/><strong class="text-purple-600">Click the tabs below to explore each one.</strong></p>
+
+            <div class="mt-12 bg-white rounded-xl shadow-xl border border-gray-200 p-4 md:p-8">
+                <!-- Tabs -->
+                <div id="tabs-container" class="flex flex-col sm:flex-row justify-center sm:space-x-8 border-b border-gray-200 mb-6 font-bold text-lg text-gray-500">
+                    <div class="interactive-tab active py-3 px-5 text-center" data-tab="1">⚙️ Positivist Social Science</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="2">💬 Interpretive Social Science</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="3">⚖️ Critical Social Science</div>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="tab-content-container">
+                    <!-- Positivism -->
+                    <div id="tab-1" class="tab-content active">
+                        <div class="p-4">
+                            <h3 class="text-3xl font-bold text-blue-700 mb-2">Positivist Social Science (PSS)</h3>
+                            <p class="text-lg text-gray-600 mb-6">The oldest and most widely used approach, modeled on the natural sciences. It emphasizes discovering objective laws that govern social behavior.</p>
+                            <div class="space-y-4">
+                                <p><strong>1. Purpose of Research:</strong> To discover and document universal causal laws of human behavior.</p>
+                                <p><strong>2. Nature of Social Reality:</strong> It's an orderly, pre-existing reality that can be discovered. Reality is "out there," independent of our consciousness.</p>
+                                <p><strong>3. Nature of Human Beings:</strong> Humans are rational, self-interested individuals who are shaped by external social forces.</p>
+                                <p><strong>4. Science and Common Sense:</strong> Science is fundamentally different from and superior to common sense. Common sense is riddled with bias and logical fallacies.</p>
+                                <p><strong>5. What is a good explanation?</strong> A logical, deductive system of interconnected laws (nomothetic). It explains *why* events occur by identifying causes.</p>
+                                <p><strong>6. How to judge an explanation?</strong> It must be logical and supported by empirical facts that can be replicated by other researchers.</p>
+                                <p><strong>7. What does good evidence look like?</strong> Facts are distinct from belief. Good evidence is observable, precise, and measured quantitatively.</p>
+                                <p><strong>8. Role of Values:</strong> Science should be value-free and objective. Values have no place in the scientific process.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Interpretivism -->
+                    <div id="tab-2" class="tab-content">
+                        <div class="p-4">
+                            <h3 class="text-3xl font-bold text-green-700 mb-2">Interpretive Social Science (ISS)</h3>
+                            <p class="text-lg text-gray-600 mb-6">Focuses on understanding the socially constructed meanings and interpretations that guide human action. It seeks to grasp the subjective worldview of those being studied.</p>
+                            <div class="space-y-4">
+                                <p><strong>1. Purpose of Research:</strong> To understand and describe meaningful social action (Verstehen).</p>
+                                <p><strong>2. Nature of Social Reality:</strong> It's an intersubjective reality, created and maintained through social interactions and shared meanings.</p>
+                                <p><strong>3. Nature of Human Beings:</strong> Humans are social beings who create meaning and actively construct their social worlds.</p>
+                                <p><strong>4. Science and Common Sense:</strong> Common sense is the very thing researchers study. Science offers a thematic understanding of common sense reality.</p>
+                                <p><strong>5. What is a good explanation?</strong> An empathetic understanding of another's worldview (idiographic). It shows how an action makes sense from the actor's perspective.</p>
+                                <p><strong>6. How to judge an explanation?</strong> It must be a coherent narrative that resonates with the lived experiences of the people studied.</p>
+                                <p><strong>7. What does good evidence look like?</strong> Good evidence is embedded in the context of fluid social interactions. It includes gestures, words, and feelings.</p>
+                                <p><strong>8. Role of Values:</strong> Research is value-relative. Values are an integral part of social life and must be understood, but the researcher should remain detached.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Critical -->
+                    <div id="tab-3" class="tab-content">
+                        <div class="p-4">
+                            <h3 class="text-3xl font-bold text-red-700 mb-2">Critical Social Science (CSS)</h3>
+                            <p class="text-lg text-gray-600 mb-6">Goes beyond just studying the world to actively trying to change it. It critiques social injustices and aims to empower people to overcome oppression.</p>
+                            <div class="space-y-4">
+                                <p><strong>1. Purpose of Research:</strong> To smash myths, expose hidden truths, and empower people to change society for the better.</p>
+                                <p><strong>2. Nature of Social Reality:</strong> A multi-layered reality where the observable surface is shaped by deep, unobservable structures of power and oppression.</p>
+                                <p><strong>3. Nature of Human Beings:</strong> Humans are creative, adaptive beings with great potential, but this potential is often trapped by social conditions.</p>
+                                <p><strong>4. Science and Common Sense:</strong> Common sense is often "false consciousness"—a distraction created by power structures to mask the true nature of reality.</p>
+                                <p><strong>5. What is a good explanation?</strong> One that demystifies illusions and reveals the underlying structures of power to help people take action.</p>
+                                <p><strong>6. How to judge an explanation?</strong> It is judged by its ability to both explain the world and inspire practical action (praxis) that brings about positive change.</p>
+                                <p><strong>7. What does good evidence look like?</strong> Facts are theory-laden. Good evidence is informed by a theory that uncovers the hidden structures of reality.</p>
+                                <p><strong>8. Role of Values:</strong> All science is inherently value-laden. CSS embraces an activist stance and is explicitly committed to values of empowerment and justice.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Summary Chart -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-purple-700">Paradigms at a Glance</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Here’s a simplified breakdown of the key differences between the three approaches.</p>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <div class="paradigm-card card bg-white p-6 rounded-xl shadow-lg border-blue-600">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-3">Positivism</h3>
+                    <p><strong>Goal:</strong> Discover Laws</p>
+                    <p><strong>Reality:</strong> Objective</p>
+                    <p><strong>Human Nature:</strong> Rational</p>
+                    <p><strong>Values:</strong> Value-Free</p>
+                    <p><strong>Methods:</strong> Quantitative</p>
+                </div>
+                <div class="paradigm-card card bg-white p-6 rounded-xl shadow-lg border-green-600">
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">Interpretivism</h3>
+                    <p><strong>Goal:</strong> Understand Meaning</p>
+                    <p><strong>Reality:</strong> Socially Constructed</p>
+                    <p><strong>Human Nature:</strong> Meaning-Making</p>
+                    <p><strong>Values:</strong> Value-Relative</p>
+                    <p><strong>Methods:</strong> Qualitative</p>
+                </div>
+                <div class="paradigm-card card bg-white p-6 rounded-xl shadow-lg border-red-600">
+                    <h3 class="text-2xl font-bold text-red-700 mb-3">Critical</h3>
+                    <p><strong>Goal:</strong> Uncover & Change</p>
+                    <p><strong>Reality:</strong> Power-Laden</p>
+                    <p><strong>Human Nature:</strong> Potential-Filled</p>
+                    <p><strong>Values:</strong> Value-Driven</p>
+                    <p><strong>Methods:</strong> Action-Oriented</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Emerging Approaches -->
+        <section class="my-24 bg-gray-800 text-white rounded-2xl p-8 md:p-16 animated-section">
+            <div class="text-center">
+                <h2 class="section-title">Beyond the Big Three</h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">The conversation doesn't end with the three major paradigms. Other critical perspectives challenge and enrich social science.</p>
+            </div>
+            <div class="mt-12 max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="card bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-2">Feminist Research</h3>
+                    <p>Critiques the male-dominated perspective in mainstream science. It emphasizes the lived experiences of women, advocates for gender equality, and focuses on how gender shapes all aspects of social life.</p>
+                </div>
+                <div class="card bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-2">Postmodern Research</h3>
+                    <p>Challenges the very idea of a single, objective "truth." It argues that reality is fragmented and composed of multiple, competing narratives. It seeks to deconstruct and expose the power hidden within language and knowledge systems.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center bg-gray-800 text-gray-400 p-6">
+        <p>Interactive Infographic based on Chapter 4 of "Social Research Methods" by W. Lawrence Neuman.</p>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.interactive-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.tab;
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('tab-' + tabId).classList.add('active');
+            });
+        });
+
+        // Scroll animation for sections
+        const animatedSections = document.querySelectorAll('.animated-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        animatedSections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>

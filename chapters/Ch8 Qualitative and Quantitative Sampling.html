@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Qualitative & Quantitative Sampling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3.5rem;
+            }
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .interactive-tab {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .interactive-tab.active {
+            color: #4338ca; /* Indigo */
+            border-color: #4338ca;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .animated-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-indigo-800 text-white text-center py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-wider">Chapter 8: Sampling</h1>
+            <p class="text-lg md:text-xl text-indigo-200">Selecting a Few to Understand the Many</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+
+        <!-- Section 1: Why Sample? -->
+        <section class="text-center my-16 animated-section">
+            <h2 class="section-title text-indigo-700">Why Not Study Everyone?</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Sampling is the process of selecting a small number of cases from a larger group. We do this because it's often impossible, impractical, or too expensive to study an entire population. A carefully selected sample can provide a surprisingly accurate picture of the whole group.</p>
+        </section>
+
+        <!-- Section 2: Two Major Approaches to Sampling -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-indigo-700">The Two Paths of Sampling</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Your research goal determines your sampling strategy. Are you trying to generalize findings to a large population, or are you exploring a specific group in-depth? <br/><strong class="text-indigo-600">Click the tabs below to explore each path.</strong></p>
+
+            <div class="mt-12 bg-white rounded-xl shadow-xl border border-gray-200 p-4 md:p-8">
+                <!-- Tabs -->
+                <div id="tabs-container" class="flex flex-col sm:flex-row justify-center sm:space-x-8 border-b border-gray-200 mb-6 font-bold text-lg text-gray-500">
+                    <div class="interactive-tab active py-3 px-5 text-center" data-tab="1">🔎 Nonprobability Sampling</div>
+                    <div class="interactive-tab py-3 px-5 text-center" data-tab="2">🎲 Probability Sampling</div>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="tab-content-container">
+                    <!-- Nonprobability -->
+                    <div id="tab-1" class="tab-content active p-4">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">Nonprobability Sampling</h3>
+                        <p class="text-lg text-gray-600 mb-8">Used when it's difficult or unnecessary to create a precise, representative sample. Common in qualitative research where the goal is deep understanding, not generalization.</p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="card bg-gray-50 p-6 rounded-lg"><h4 class="font-bold text-lg mb-2">Convenience Sampling</h4><p>Selecting cases that are easy to reach (e.g., interviewing shoppers at a mall). It's fast and cheap, but can be highly unrepresentative.</p></div>
+                            <div class="card bg-gray-50 p-6 rounded-lg"><h4 class="font-bold text-lg mb-2">Quota Sampling</h4><p>A step up from convenience. You first identify relevant categories (e.g., age, gender) and then select a certain number of cases to fill each "quota."</p></div>
+                            <div class="card bg-gray-50 p-6 rounded-lg"><h4 class="font-bold text-lg mb-2">Purposive Sampling</h4><p>Using expert judgment to select cases that are most relevant to the research question (e.g., studying a specific social movement by interviewing its leaders).</p></div>
+                            <div class="card bg-gray-50 p-6 rounded-lg"><h4 class="font-bold text-lg mb-2">Snowball Sampling</h4><p>Starting with one or two members of a hard-to-reach population and asking them to refer you to others (e.g., studying undocumented immigrants or members of a secret society).</p></div>
+                        </div>
+                    </div>
+                    <!-- Probability -->
+                    <div id="tab-2" class="tab-content p-4">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">Probability Sampling</h3>
+                        <p class="text-lg text-gray-600 mb-8">The gold standard for quantitative research. Its key feature is **random selection**, where every case in the population has an equal chance of being chosen. This allows us to generalize our findings from the sample to the population with a known degree of accuracy.</p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="card bg-gray-50 p-6 rounded-lg"><h4 class="font-bold text-lg mb-2">Simple Random Sample (SRS)</h4><p>The most basic method. You create a list of everyone in the population (a sampling frame) and randomly select cases, like drawing names from a hat.</p></div>
+                            <div class="card bg-gray-50 p-6 rounded-lg"><h4 class="font-bold text-lg mb-2">Systematic Sampling</h4><p>Simpler than SRS. You calculate a sampling interval (e.g., every 10th person) and select cases at that interval from your sampling frame.</p></div>
+                            <div class="card bg-gray-50 p-6 rounded-lg"><h4 class="font-bold text-lg mb-2">Stratified Sampling</h4><p>First, divide the population into subgroups ("strata") based on a key characteristic (e.g., year in college). Then, draw a random sample from *each* subgroup. This ensures representation.</p></div>
+                            <div class="card bg-gray-50 p-6 rounded-lg"><h4 class="font-bold text-lg mb-2">Cluster Sampling</h4><p>For large, dispersed populations. You first randomly sample larger units ("clusters," like cities), then randomly sample smaller units within those clusters (like neighborhoods), and so on, until you reach individuals.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Logic of Probability Sampling (REVISED) -->
+        <section class="my-24 animated-section">
+            <h2 class="section-title text-center text-indigo-700">The Power of Randomness</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto text-center">Probability sampling works because of a powerful statistical idea: the **Central Limit Theorem**. It states that if you draw many random samples, the results of those samples will form a perfect bell-shaped curve around the true population value.</p>
+            <div class="mt-12 bg-white p-6 md:p-8 rounded-xl shadow-xl border border-gray-200">
+                <div class="grid lg:grid-cols-3 gap-8 items-center">
+                    <!-- Step 1: Population -->
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">1. The Population</h3>
+                        <img src="https://placehold.co/300x200/eef2ff/4338ca?text=Population" alt="A large group of abstract shapes representing a population" class="mx-auto rounded-lg shadow-md">
+                        <p class="mt-3 text-gray-600">Imagine a large population. We want to know its true average (the <strong>parameter</strong>), but we can't measure everyone.</p>
+                    </div>
+                    <!-- Step 2: Samples -->
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">2. Many Random Samples</h3>
+                        <img src="https://placehold.co/300x200/eef2ff/4338ca?text=Samples" alt="Several small groups being drawn from the large population" class="mx-auto rounded-lg shadow-md">
+                        <p class="mt-3 text-gray-600">So, we take many random samples. Each sample gives us its own estimate (a <strong>statistic</strong>). Some will be high, some low.</p>
+                    </div>
+                    <!-- Step 3: Distribution -->
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">3. The Sampling Distribution</h3>
+                        <img src="https://placehold.co/300x200/eef2ff/4338ca?text=Distribution" alt="A bell curve formed by plotting the results of all the samples" class="mx-auto rounded-lg shadow-md">
+                        <p class="mt-3 text-gray-600">When we plot the results of all our samples, they form a bell curve centered exactly on the true population parameter!</p>
+                    </div>
+                </div>
+                <hr class="my-8 border-gray-200">
+                <div class="grid md:grid-cols-2 gap-8 text-lg">
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">The Takeaway</h3>
+                        <p>This tells us that while any single sample might be slightly off, the laws of probability ensure that it's most likely to be very close to the true value. This is what allows us to be confident in our results.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">Confidence Intervals</h3>
+                        <p>Using this principle, we can calculate a <strong class="text-indigo-600">confidence interval</strong>—a range of values where we are highly certain (e.g., 95% confident) the true population parameter lies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: How Big a Sample? -->
+        <section class="my-24 bg-gray-800 text-white rounded-2xl p-8 md:p-16 animated-section">
+            <div class="text-center">
+                <h2 class="section-title">How Big Should My Sample Be?</h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">This is one of the most common questions in research. The answer is not a simple percentage (like "10% of the population"). It depends on several factors:</p>
+            </div>
+            <div class="mt-12 grid sm:grid-cols-3 gap-8 text-center">
+                <div class="card bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-indigo-400 mb-2">1. Desired Accuracy</h3>
+                    <p>How small do you want your margin of error to be? More accuracy requires a larger sample.</p>
+                </div>
+                <div class="card bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-indigo-400 mb-2">2. Population Variation</h3>
+                    <p>How diverse is your population? A more varied population requires a larger sample to capture that diversity.</p>
+                </div>
+                <div class="card bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-indigo-400 mb-2">3. Number of Variables</h3>
+                    <p>How many different things are you studying at once? Analyzing many subgroups requires a larger sample.</p>
+                </div>
+            </div>
+             <p class="mt-8 text-center text-xl text-gray-400">A key insight: for large populations (e.g., over 100,000), the sample size needed for a given level of accuracy stays relatively constant. A sample of ~1,500 can represent the entire United States with a small margin of error!</p>
+        </section>
+
+    </main>
+
+    <footer class="text-center bg-gray-800 text-gray-400 p-6">
+        <p>Interactive Infographic based on Chapter 8 of "Social Research Methods" by W. Lawrence Neuman.</p>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.interactive-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.tab;
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('tab-' + tabId).classList.add('active');
+            });
+        });
+
+        // Scroll animation for sections
+        const animatedSections = document.querySelectorAll('.animated-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        animatedSections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
+
